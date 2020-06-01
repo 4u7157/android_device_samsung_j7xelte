@@ -9,6 +9,6 @@ git clone -b android-9.0 https://github.com/4u7157/android_device_samsung_j7xelt
 ```
 3. To build:
 ```bash
-export ALLOW_MISSING_DEPENDENCIES=true && . build/envsetup.sh && lunch omni_j7xelte-eng && mka recoveryimage -j$(nproc --all)
+. build/envsetup.sh && lunch omni_j7xelte-eng && mka recoveryimage -j$(nproc --all)
 ```
 
