@@ -56,3 +56,6 @@ TW_USE_NEW_MINADBD := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
 
+# Compress the ramdisk in a different format than gunzip
+RECOVERY_RAMDISK_COMPRESSOR := lz4 -f -9
+
