@@ -1,9 +1,9 @@
 # Platform
 BOARD_VENDOR := samsung
 TARGET_BOARD_PLATFORM := exynos5
-TARGET_BOARD_PLATFORM_GPU := mali-g72
-TARGET_SOC := exynos9810
-TARGET_BOOTLOADER_BOARD_NAME := universal9810
+TARGET_BOARD_PLATFORM_GPU := mali-t830mp1
+TARGET_SOC := exynos7870
+TARGET_BOOTLOADER_BOARD_NAME := universal7870
 TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
@@ -22,20 +22,15 @@ TARGET_2ND_CPU_ABI := armeabi-v7a
 TARGET_2ND_CPU_ABI2 := armeabi
 TARGET_2ND_CPU_VARIANT := cortex-a53
 
-# Kernel
-TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_HEADER_ARCH := arm64
-TARGET_KERNEL_CONFIG := exynos9810-star2lte_defconfig
-TARGET_KERNEL_SOURCE := kernel/samsung/universal9810
-
 # Image
-BOARD_CUSTOM_BOOTIMG_MK := device/samsung/star2lte/mkbootimg.mk
-BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_CUSTOM_BOOTIMG_MK := device/samsung/j7xelte/mkbootimg.mk
 BOARD_KERNEL_SEPARATED_DT := true
 BOARD_KERNEL_BASE := 0x10000000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPQH16A001RU
-TARGET_CUSTOM_DTBTOOL := dtbhtoolExynos
+BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 --tags_offset 0x00000100 --board SRPOL10A000RU
+
+TARGET_PREBUILT_KERNEL := device/samsung/j7xelte/Image
+TARGET_PREBUILT_DTB := device/samsung/j7xelte/dt.img
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
@@ -49,7 +44,7 @@ ALLOW_MISSING_DEPENDENCIES=true
 TW_THEME := portrait_hdpi
 RECOVERY_SDCARD_ON_DATA := true
 TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
-TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_BRIGHTNESS_PATH := "/sys/devices/14800000.dsim/backlight/panel/brightness"
 TW_MAX_BRIGHTNESS := 25500
 TW_DEFAULT_BRIGHTNESS := 12800
 TW_NO_REBOOT_BOOTLOADER := true
@@ -60,7 +55,4 @@ TW_EXTRA_LANGUAGES := true
 TW_USE_NEW_MINADBD := true
 TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_FBE := true
-
-# Include
-TARGET_SPECIFIC_HEADER_PATH := device/samsung/star2lte/include
 
