@@ -8,9 +8,9 @@ $(call inherit-product, vendor/omni/config/common.mk)
 
 # Fix build error on android 9+ manifest
 PRODUCT_COPY_FILES += \
-     $(LOCAL_PATH)/Image:kernel \
-     $(LOCAL_PATH)/dt.img:dt.img \
-     $(LOCAL_PATH)/dt.img:boot.img
+     $(LOCAL_PATH)Image:kernel \
+     $(LOCAL_PATH)dt.img:dt.img \
+     $(LOCAL_PATH)dt.img:boot.img
 
 # Device identifier
 PRODUCT_DEVICE := j7xelte
