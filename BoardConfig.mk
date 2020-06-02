@@ -31,6 +31,7 @@ BOARD_MKBOOTIMG_ARGS := --kernel_offset 0x00008000 --ramdisk_offset 0x01000000 -
 
 TARGET_PREBUILT_KERNEL := device/samsung/j7xelte/Image
 TARGET_PREBUILT_DTB := device/samsung/j7xelte/dt.img
+BOARD_KERNEL_IMAGE_NAME := Image
 
 # File systems
 BOARD_HAS_LARGE_FILESYSTEM := true
